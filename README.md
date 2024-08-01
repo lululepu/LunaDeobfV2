@@ -1,6 +1,6 @@
 # Luna Ungrabber
 
-![GitHub](https://img.shields.io/github/license/lululepu/Blank-Ungrabber)
+![GitHub](https://img.shields.io/github/license/lululepu/LunaDeobfV2)
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
 
 Decrypt and analyze a Luna Ungrabber executable.
@@ -15,7 +15,7 @@ This Python script is designed to decrypt and analyze Luna Grabber executables. 
 
 ## Features
 
-- Decrypt Blank Grabber executables
+- Decrypt Luna Grabber executables
 - Deobfuscate code
 - Identify Discord webhooks
 - Test identified webhooks
@@ -59,7 +59,7 @@ The script uses multiple functions to handle different layers of obfuscation:
 
 ### Running the Script
 
-To run the script, provide the path to the Blank Grabber executable when prompted:
+To run the script, provide the path to the Luna Grabber executable when prompted:
 
 ```bash
 Executable Path: <path_to_executable>
