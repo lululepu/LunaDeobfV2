@@ -57,16 +57,6 @@ The script uses multiple functions to handle different layers of obfuscation:
 - **Layer_2_Plain**: Deobfuscates Layer 2 of plain obfuscation.
 - **Layer_3_Plain**: Deobfuscates Layer 3 of plain obfuscation.
 
-### Running the Script
-
-To run the script, provide the path to the Luna Grabber executable when prompted:
-
-```bash
-Executable Path: <path_to_executable>
-```
-
-The script will then attempt to extract and deobfuscate the executable, ultimately revealing any embedded Discord webhook URLs.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
