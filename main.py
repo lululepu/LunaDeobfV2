@@ -9,7 +9,6 @@ import sys
 import re
 import io
 import os
-from tkinter import filedialog as fd
 
 init()
 
@@ -27,7 +26,12 @@ def get_pyc_vers_header(fstruct: dict) -> bytes:
         sys.exit()
       return HEADERS[int(ver)]
 
-executable= fd.askopenfilename(title="file to ungrab")
+try:
+  from tkinter import filedialog as fd
+  executable = fd.askopenfilename(title="Select file to decompile")
+except ImportError:
+  executable = input('File path: ')
+  
 if not os.path.exists(executable):
   print(Colors.purple+'[-] Invalid File')
   sys.exit()
