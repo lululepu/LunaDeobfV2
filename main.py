@@ -84,11 +84,21 @@ def Layer_1_PYC(insts: list[xdis.Instruction]) -> str:
   """
   print(Colors.purple+'[*] Deobfuscating pyc layer1')
   base: list[list[tuple, int, int]] = []
+   
   for i in range(len(insts)):
     cur: xdis.Instruction = insts[i]
+    
     if not isinstance(cur.argval, tuple):continue
+    # print(len(cur.argval))
     if len(cur.argval) > 1000:
-      base.append([cur.argval, insts[i+12].argval, insts[i+13].argval])
+      slice1 = insts[i+12].argval
+      slice2 = insts[i+13].argval
+      if slice1 == None or isinstance(slice1, str):
+        slice1 = insts[i+10].argval
+      if slice2 == None or isinstance(slice2, str):
+        slice2 = insts[i+11].argval
+      base.append([cur.argval, slice1, slice2])
+
   _ = base[0][0][::-1][base[0][1]:base[0][2]]
   __ = base[1][0][::-1][base[1][1]:base[1][2]]
   ___ = base[2][0][::-1][base[2][1]:base[2][2]]
